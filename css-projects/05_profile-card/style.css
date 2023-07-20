@@ -1,0 +1,127 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #fcf0ff;
+  font-family: 'Nunito', sans-serif;
+}
+
+.container {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-inline: 16px;
+}
+
+.top-strip {
+  background-color: #9d40e4;
+  height: 36px;
+}
+
+.profile-card {
+  width: 100%;
+  max-width: 335px;
+  background-color: #9d40e4;
+  border-radius: 30px;
+  padding: 32px 22px 24px;
+  position: relative;
+}
+
+.icons-container {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.icons-container img {
+  cursor: pointer;
+}
+
+.profile-content {
+  background-color: white;
+  border-radius: 30px;
+  text-align: center;
+  margin-top: 60px;
+  position: relative;
+}
+
+.social-media-icons {
+  padding: 16px 0 10px;
+  border-top: 2px solid #f5f5f5;
+}
+
+.view-profile-btn {
+  border-radius: 25px;
+  text-decoration: none;
+  padding: 8px 20px;
+  display: inline-block;
+  color: white;
+  margin-bottom: 22px;
+  font-size: 15px;
+  font-weight: 700;
+  background-image: linear-gradient(90deg, #fecd2f 0%, #feb02f 100%);
+}
+
+.view-profile-btn:hover {
+    background-image: linear-gradient(0deg, #fecd2f 0%, #feb02f 100%);
+}
+
+
+
+.card-heading {
+  margin-top: 14px;
+  font-size: 18px;
+  margin-bottom: 0;
+}
+
+.card-subtitle {
+  margin-top: 6px;
+  color: #a6a6a6;
+}
+
+.avatar-container {
+  display: inline-block;
+  margin-top: -60px;
+  border: 8px solid white;
+  border-radius: 100%;
+  position: relative;
+}
+
+.green-dot {
+  width: 14px;
+  height: 14px;
+  background-color: #87e57b;
+  border-radius: 100%;
+  box-sizing: content-box;
+  border: 4px solid white;
+  position: absolute;
+  right: 0;
+  bottom: 10px;
+}
+
+.circle {
+  border-radius: 100%;
+  background-image: linear-gradient(0deg, #9c45de 0%, #a453e2 100%);
+  position: absolute;
+}
+
+.circle-1 {
+  right: 36px;
+  top: 8px;
+  width: 160px;
+  height: 160px;
+}
+
+.circle-2 {
+  width: 90px;
+  height: 90px;
+  left: 8px;
+  top: 90px;
+}
+
+.social-media-icon + .social-media-icon {
+    margin-left: 8px;
+}

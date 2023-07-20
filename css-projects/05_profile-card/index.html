@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile Card</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="top-strip"></div>
+    <div class="container">
+      <div class="profile-card">
+        <div class="circle circle-1"></div>
+        <div class="circle circle-2"></div>
+        <div class="icons-container">
+          <img src="./images/like-icon.svg" alt="like-icon" />
+          <img onclick="navigator.share({url: location.href})" src="./images/share-icon.svg" alt="share-icon" />
+        </div>
+        <div class="profile-content">
+          <div class="avatar-container">
+            <img src="./images/avatar.svg" alt="avatar" />
+            <div class="green-dot"></div>
+          </div>
+          <h3 class="card-heading">Anurag Singh Procodrr</h3>
+          <p class="card-subtitle">Frontend Developer</p>
+          <a href="#" class="view-profile-btn">View Full Profile</a>
+          <div class="social-media-icons">
+            <img class="social-media-icon" src="./images/linkedin.svg" alt="linkedin" />
+            <img class="social-media-icon" src="./images/twitter.svg" alt="twitter" />
+            <img class="social-media-icon" src="./images/telegram.svg" alt="telegram" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
