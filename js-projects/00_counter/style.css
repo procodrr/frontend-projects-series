@@ -1,0 +1,28 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    text-align:  center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.count {
+    font-size: 3rem;
+}
+
+button {
+    padding: 10px 16px;
+    background-color: cyan;
+    border: 1px solid grey;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.changeBy {
+    width: 5rem;
+    height: 2rem;
+    font-size: 1rem;
+    margin: 16px 8px;
+}
