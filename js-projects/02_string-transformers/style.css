@@ -1,0 +1,39 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+}
+
+main {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+input {
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+}
+
+.transformed-output {
+  font-size: 1.2rem;
+  margin: 1.5rem 0;
+  padding: 1rem;
+  background-color: beige;
+  position: relative;
+  text-align: left;
+}
+
+.transformed-output label {
+  font-size: 0.75rem;
+  position: absolute;
+  top: -0.75rem;
+  left: 1rem;
+  background-color: black;
+  color: white;
+  padding: 0.25rem;
+}
