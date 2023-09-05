@@ -1,0 +1,30 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  padding: 16px 32px;
+}
+
+body.dark {
+  background-color: #27292d;
+  color: rgb(236, 236, 236);
+}
+
+h1 {
+  margin-bottom: 48px;
+}
+
+.container {
+  border: 1px solid blue;
+  padding: 32px;
+  margin-top: 16px;
+  background-color: white;
+  color: black;
+}
+
+.container.dark {
+  background-color: #27292d;
+  color: rgb(236, 236, 236);
+}
