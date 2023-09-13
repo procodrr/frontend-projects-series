@@ -1,0 +1,153 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 16px;
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+}
+
+select, input[type="text"], button {
+    font: inherit;
+    padding: 8px;
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 400px;
+    margin-inline: auto;
+}
+
+.duration-container {
+    display: flex;
+    align-items: center;
+}
+
+#duration {
+    flex-grow: 1;
+}
+
+button {
+    cursor: pointer;
+}
+
+.toast {
+    padding: 0.5em;
+    color: white;
+    border-radius: 0.25rem;
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
+    animation: fromLeft 0.1s ease-in;
+}
+
+.toasts-container.right .toast  {
+    animation: fromRight 0.1s ease-in;
+}
+
+.toast.go-left {
+    animation: toLeft 0.1s ease-in forwards;
+}
+
+.toasts-container.right .toast.go-right {
+    animation: toRight 0.1s ease-in forwards;
+}
+
+@keyframes fromLeft {
+    0% {
+        transform: translateX(-100%);
+    } 
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes toLeft {
+    0% {
+        transform: translateX(0);
+    } 
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes fromRight {
+    0% {
+        transform: translateX(100%);
+    } 
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes toRight{
+    0% {
+        transform: translateX(0);
+    } 
+
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+.toast.success {
+    background-color: #009600;
+}
+
+.toast.error {
+    background-color: #ff0000;
+}
+
+.toast.warning {
+    background-color: #ec6b03;
+}
+
+.toast.info {
+    background-color: #4e4e4e;
+}
+
+.toast.success::before {
+    content: '✓';
+}
+
+.toast.error::before {
+    content: '✗';
+}
+
+.toast.warning::before {
+    content: '⚠';
+}
+
+.toast.info::before {
+    content: 'ⓘ';
+}
+
+.toast span {
+    cursor: pointer;
+}
+
+.toasts-container {
+    position: absolute;
+    top: 1rem;
+    left: 0rem;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    overflow: hidden;
+    padding: 0 1rem;
+}
+
+.toasts-container.right {
+    left: auto;
+    right: 0rem;
+}
+
+.toasts-container.bottom {
+    top: auto;
+    bottom: 1rem;
+}
