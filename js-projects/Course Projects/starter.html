@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Keyboard Event Game</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+      #player {
+        width: 50px;
+        height: 50px;
+        background-color: blue;
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="player"></div>
+
+    <script>
+      const player = document.getElementById('player')
+      let playerPosition = 0
+
+      // by calling this function you can make the player move left and right
+      function movePlayer(direction) {
+        if (direction === 'left') {
+          playerPosition -= 10
+          player.style.left = playerPosition + 'px'
+        } else if (direction === 'right') {
+          playerPosition += 10
+          player.style.left = playerPosition + 'px'
+        } else if (direction === 'up') {
+          playerPositionY += 10
+          player.style.bottom = playerPositionY + 'px'
+        } else if (direction === 'down') {
+          playerPositionY -= 10
+          player.style.bottom = playerPositionY + 'px'
+        }
+      }
+
+      // by writing these lines you can tell when to player should move
+      // your code here
+    </script>
+  </body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Simple Keyboard Event Game</title>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+    #player {
+        width: 50px;
+        height: 50px;
+        background-color: blue;
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
+    }
+</style>
+</head>
+<body>
+
+<div id="player"></div>
+
+<script>
+    const player = document.getElementById('player');
+    let playerPositionX = 0;
+    let playerPositionY = 0;
+
+    function movePlayer(direction) {
+        if (direction === 'left') {
+            playerPositionX -= 10;
+            player.style.left = playerPositionX + 'px';
+        } else if (direction === 'right') {
+            playerPositionX += 10;
+            player.style.left = playerPositionX + 'px';
+        } else if (direction === 'up') {
+            playerPositionY += 10;
+            player.style.bottom = playerPositionY + 'px';
+        } else if (direction === 'down') {
+            playerPositionY -= 10;
+            player.style.bottom = playerPositionY + 'px';
+        }
+    }
+
+    document.addEventListener('keydown', function(event) {
+        const key = event.key;
+        if (key === 'ArrowLeft') {
+            movePlayer('left');
+        } else if (key === 'ArrowRight') {
+            movePlayer('right');
+        } else if (key === 'ArrowUp') {
+            movePlayer('up');
+        } else if (key === 'ArrowDown') {
+            movePlayer('down');
+        }
+    });
+</script>
+
+</body>
+</html>
